@@ -3,10 +3,20 @@
 Automatically manages the CLS namespace for ssacl/sequelize allowing you to simply do:
 
 ```js
-koa.use(errorHandler);
-koa.use(require('koa-sequelize-transaction')({
+var _ = require('koa-route')
+  , koa = require('koa')
+  , app = koa();
+
+app.use(errorHandler);
+app.use(require('koa-sequelize-transaction')({
   // pass an instance of sequelize
   sequelize: sequelize
+}));
+
+app.use(_.post('/pets', function *() {
+  // Both calls are automatically in the same transaction
+  var pet = yield Pet.create({});
+  yield pet.addOwner(this.actor);
 }));
 ```
 
