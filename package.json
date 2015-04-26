@@ -1,0 +1,40 @@
+{
+  "name": "koa-sequelize-transaction",
+  "version": "0.0.1",
+  "description": "Wrap all koa calls in a transaction",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": " ./node_modules/.bin/jshint lib/ test/ && ./node_modules/.bin/_mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mickhansen/koa-sequelize-transaction"
+  },
+  "keywords": [
+    "ssacl"
+  ],
+  "author": "Mick Hansen <maker@mhansen.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mickhansen/koa-sequelize-transaction/issues"
+  },
+  "homepage": "https://github.com/mickhansen/koa-sequelize-transaction",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "chai-as-promised": "^5.0.0",
+    "co-mocha": "^1.1.0",
+    "co-supertest": "0.0.8",
+    "jshint": "^2.7.0",
+    "koa": "^0.19.1",
+    "mocha": "^2.2.4",
+    "sequelize": "^2.0.6",
+    "ssacl": "^0.1.2",
+    "supertest": "^0.15.0",
+    "sqlite3": "^3.0.5",
+    "sinon": "^1.14.1"
+  },
+  "dependencies": {
+    "co": "^4.5.2",
+    "continuation-local-storage": "^3.1.4"
+  }
+}
